@@ -4,9 +4,13 @@ from setuptools import find_packages, setup
 with open(os.path.join('scalr', 'VERSION')) as file:
     version = file.read().strip()
 
+with open('README.rst') as file:
+    long_description = file.read()
+
 setup(
     name='scalr-api',
     description='Scalr REST API Python Wrapper',
+    long_description=long_description,
     version=version,
     license='MIT',
     author='Nrupesh Patel',

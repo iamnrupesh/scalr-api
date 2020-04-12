@@ -1,12 +1,21 @@
-============================
+========================
 Scalr Python API Wrapper
-============================
+========================
+
+.. image:: https://badge.fury.io/py/scalr-api.svg
+    :target: https://badge.fury.io/py/scalr-api
+.. image:: https://img.shields.io/pypi/l/scalr-api.svg
+    :target: https://pypi.python.org/pypi/scalr-api/
+.. image:: https://api.codacy.com/project/badge/Grade/c73aa1a661124abc95af293cbd4a2743
+   :target: https://app.codacy.com/manual/Nrupesh29/scalr-api?utm_source=github.com&utm_medium=referral&utm_content=Nrupesh29/scalr-api&utm_campaign=Badge_Grade_Dashboard
 
 Install
 -------
+
 .. code-block:: console
 
    $ pip install scalr-api
+
 
 Examples
 --------
@@ -25,6 +34,7 @@ Here is an example of how to delete a Scalr role:
             )
 
     scalr.role_delete(role_id=your_role_id)
+
 
 Credits
 -------

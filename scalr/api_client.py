@@ -70,7 +70,7 @@ class ScalrRestAPISession(requests.Session):
             canon_qs = ""
 
         request_body = request.body if request.body is not None else ""
-        request_body = bytes(request_body, "utf-8") if type(request_body) == str else request_body
+        request_body = bytes(request_body, "utf-8") if isinstance(request_body, str) else request_body
 
         sts = b"\n".join([
             bytes(request.method, 'utf-8'),
@@ -80,7 +80,7 @@ class ScalrRestAPISession(requests.Session):
             request_body
         ])
 
-        auth_hash = hmac.new(bytes(self.client.key_secret, 'utf-8'), sts, hashlib.sha256)
+        auth_hash = hmac.new(bytes(self.client.secret_key, 'utf-8'), sts, hashlib.sha256)
         auth_hash.hexdigest()
 
         sig = b" ".join([

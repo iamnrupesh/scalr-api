@@ -359,3 +359,68 @@ class ScalrUserAPI(ScalrRestAPI):
         log.info(f"Terminating server {server_id}")
         url = f"/api/v1beta0/user/{self.env_id}/servers/{server_id}/actions/terminate/"
         return self.post(url, json={"force": force_terminate})
+
+    def image_create(self, image):
+        """
+        Register a new Image in this Environment.
+        :param image: https://api-explorer.scalr.com/definitions/I/Image.html
+        :return:
+        """
+        log.info(f"Creating image {image['name']}")
+        url = f"/api/v1beta0/user/{self.env_id}/images/"
+        return self.create(url, json=image)
+
+    def image_delete(self, image_id, **params):
+        """
+        Remove an Image from the Environment. By default this does not delete the underlying machine image from the
+        Cloud it resides in.
+        :param image_id: str
+        :param deleteFromCloud: bool
+        :return:
+        """
+        log.info(f"Deleting image {image_id}")
+        url = f"/api/v1beta0/user/{self.env_id}/images/{image_id}/"
+        return self.delete(url, params=params)
+
+    def image_edit(self, image_id, image):
+        """
+        Modify the attributes of an Images. Currently only the name of the Image be can changed.
+        :param image_id: str
+        :param image: https://api-explorer.scalr.com/definitions/I/Image.html
+        :return:
+        """
+        log.info(f"Editing image {image_id}")
+        url = f"/api/v1beta0/user/{self.env_id}/images/{image_id}/"
+        return self.patch(url, json=image)
+
+    def image_get(self, image_id):
+        """
+        Retrieve detailed information about an Image.
+        :param image_id: str
+        :return:
+        """
+        log.info(f"Fetching image {image_id}")
+        url = f"/api/v1beta0/user/{self.env_id}/images/{image_id}/"
+        return self.fetch(url)
+
+    def image_list(self, **params):
+        """
+        List all the Images available in the Environment.
+        :param architecture: str
+        :param cloudImageId: str
+        :param cloudInitInstalled: bool
+        :param cloudLocation: str
+        :param cloudPlatform: str
+        :param deprecated: bool
+        :param id: str
+        :param name: str
+        :param os: str
+        :param scalrAgentInstalled: bool
+        :param scope: str
+        :param source: str
+        :param status: str
+        :return:
+        """
+        log.info(f"Listing images")
+        url = f"/api/v1beta0/user/{self.env_id}/images/"
+        return self.list(url, params=params)
