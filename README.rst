@@ -2,6 +2,10 @@
 Scalr Python API Wrapper
 ============================
 
+.. image:: https://api.codacy.com/project/badge/Grade/c73aa1a661124abc95af293cbd4a2743
+   :alt: Codacy Badge
+   :target: https://app.codacy.com/manual/Nrupesh29/scalr-api?utm_source=github.com&utm_medium=referral&utm_content=Nrupesh29/scalr-api&utm_campaign=Badge_Grade_Dashboard
+
 Install
 -------
 .. code-block:: console
