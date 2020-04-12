@@ -1,0 +1,2 @@
+include scalr/VERSION
+include README.rst
