@@ -4,10 +4,22 @@ Scalr Python API Wrapper
 
 .. image:: https://badge.fury.io/py/scalr-api.svg
     :target: https://badge.fury.io/py/scalr-api
+    :alt: PyPI Package Version
 .. image:: https://img.shields.io/pypi/l/scalr-api.svg
     :target: https://pypi.python.org/pypi/scalr-api/
+    :alt: PyPI - License
 .. image:: https://api.codacy.com/project/badge/Grade/c73aa1a661124abc95af293cbd4a2743
-   :target: https://app.codacy.com/manual/Nrupesh29/scalr-api?utm_source=github.com&utm_medium=referral&utm_content=Nrupesh29/scalr-api&utm_campaign=Badge_Grade_Dashboard
+    :target: https://app.codacy.com/manual/Nrupesh29/scalr-api?utm_source=github.com&utm_medium=referral&utm_content=Nrupesh29/scalr-api&utm_campaign=Badge_Grade_Dashboard
+    :alt: Code Quality Status
+.. image:: https://snyk.io/test/github/Nrupesh29/scalr-api/badge.svg?targetFile=requirements.txt
+    :target: https://snyk.io/test/github/Nrupesh29/scalr-api?targetFile=requirements.txt
+    :alt: Vulnerabilities Status
+.. image:: https://requires.io/github/Nrupesh29/scalr-api/requirements.svg?branch=master
+    :target: https://requires.io/github/Nrupesh29/scalr-api/requirements/?branch=master
+    :alt: Requirements Status
+.. image:: https://img.shields.io/pypi/pyversions/scalr-api
+    :target: https://pypi.python.org/pypi/scalr-api/
+    :alt: PyPI - Python Version
 
 Install
 -------
@@ -17,10 +29,10 @@ Install
    $ pip install scalr-api
 
 
-Examples
---------
+Quickstart
+----------
 
-Here are some examples on how to work with Scalr roles:
+Here an example on how to work with Scalr roles:
 
 .. code-block:: python
 

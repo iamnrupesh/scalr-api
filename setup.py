@@ -22,6 +22,7 @@ setup(
     package_dir={'scalr': 'scalr'},
     include_package_data=True,
     zip_safe=False,
+    python_requires='>=3.6',
     install_requires=[
         "requests",
         "pytz"
@@ -30,6 +31,9 @@ setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ]
 )
