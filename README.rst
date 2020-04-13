@@ -20,6 +20,9 @@ Scalr Python API Wrapper
 .. image:: https://img.shields.io/pypi/pyversions/scalr-api
     :target: https://pypi.python.org/pypi/scalr-api/
     :alt: PyPI - Python Version
+.. image:: https://github.com/Nrupesh29/scalr-api/.github/workflows/pythonpublish.yml/badge.svg
+    :target: https://pypi.python.org/pypi/scalr-api/
+    :alt: Release PyPI Status
 
 Install
 -------
