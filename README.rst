@@ -20,7 +20,7 @@ Install
 Examples
 --------
 
-Here is an example of how to delete a Scalr role:
+Here are some examples on how to work with Scalr roles:
 
 .. code-block:: python
 
@@ -30,10 +30,43 @@ Here is an example of how to delete a Scalr role:
                 url='https://your-scalr-host/',
                 key_id='your_scalr_key_id',
                 secret_key='your_scalr_secret_key',
-                env_id=your_scalr_environment_id
+                env_id=4
             )
-
-    scalr.role_delete(role_id=your_role_id)
+    
+    role_data = {
+      "builtinAutomation": [
+        "base"
+      ],
+      "category": {
+        "id": 1
+      },
+      "name": "string",
+      "os": {
+        "id": "string"
+      },
+      "useScalrAgent": true
+    }
+ 
+    scalr.role_create(role=role_data)
+    scalr.role_delete(role_id=12)
+    
+    updated_role_data = {
+      "category": {
+        "id": 1
+      },
+      "description": "string",
+      "name": "string",
+      "quickStart": true,
+      "quickStartGroup": "string",
+      "tags": [
+        "string"
+      ]
+    }
+    
+    scalr.role_edit(role_id=26, role=updated_role_data)
+    role = scalr.role_get(role_id=9)
+    roles = scalr.role_list()
+    scalr.role_clone(role_id=45, name="Cloned Role")
 
 
 Credits
